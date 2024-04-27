@@ -1,0 +1,572 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ #animatedDiv {
+ width: 100px;
+ height: 100px;
+ background-color: #3498db;
+ position: relative;
+ transition: transform 0.5s ease;
+ }
+ </style>
+</head>
+<body>
+
+<button onclick="animateDiv()">Click Me</button>
+<div id="animatedDiv"></div>
+
+<script>
+ var currentRotation = 0; // Variable to store the current rotation value
+
+ function animateDiv() {
+ var div = document.getElementById('animatedDiv');
+
+ // Increment the rotation value
+ currentRotation += 360;
+
+ // Apply the rotation using CSS transform property
+ div.style.transform = 'rotate(' + currentRotation + 'deg)';
+ }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ .tab {
+ display: none;}
+
+.active {
+ display: block;
+ }
+ .tab-button {
+ cursor: pointer;
+ padding: 10px;
+ margin: 5px;
+ border: 1px solid #ccc;
+ background-color: #f1f1f1;
+ }
+</style>
+</head>
+<body>
+
+<div>
+ <button class="tab-button" onclick="openTab('tab1')">Tab 1</button>
+ <button class="tab-button" onclick="openTab('tab2')">Tab 2</button>
+ <button class="tab-button" onclick="openTab('tab3')">Tab 3</button>
+</div>
+
+<div id="tab1" class="tab active">Content for Tab 1</div>
+<div id="tab2" class="tab">Content for Tab 2</div>
+<div id="tab3" class="tab">Content for Tab 3</div>
+
+<script>
+ function openTab(tabName) {
+ var tabs = document.querySelectorAll('.tab');
+ tabs.forEach(function(tab) {
+ tab.classList.remove('active');
+ });
+
+ var activeTab = document.getElementById(tabName);
+ activeTab.classList.add('active');
+ }
+</script>
+
+</body>
+</html>
+
+
+<br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ /* Styles for the overlay background */
+ .overlay {
+ display: none;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: rgba(0, 0, 0, 0.5);
+ justify-content: center;
+ align-items: center;
+ }
+
+ /* Styles for the modal content */
+ .modal {
+ background: #fff;
+ padding: 20px;
+ border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+ </style>
+</head>
+<body>
+
+<!-- The overlay and modal content -->
+<div class="overlay" id="myOverlay">
+ <div class="modal">
+ <p>This is your pop-up content.</p>
+ <button onclick="closeModal()">Close</button>
+ </div>
+</div>
+
+<script>
+ // Function to open the modal
+ function openModal() {
+ document.getElementById('myOverlay').style.display = 'flex';
+ }
+
+ // Function to close the modal
+ function closeModal() {
+ document.getElementById('myOverlay').style.display = 'none';
+ }
+
+ // Open the modal automatically after 3 seconds
+setTimeout(openModal, 3000);
+</script>
+
+</body>
+</html><br><br><br>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ #flipContainer {
+ perspective: 500px;
+ width: 200px;
+ height: 200px;
+ }
+
+ #flipper {
+ width: 100%;
+ height: 100%;
+ transform-style: preserve-3d;
+ transition: transform 0.5s;
+ }
+
+ #flipContainer:hover #flipper {
+ transform: rotateY(180deg);
+ }
+
+ #front, #back {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ backface-visibility: hidden;
+ }
+
+ #back {
+ transform: rotateY(180deg);
+ }
+
+ img {
+ width: 100%;
+ height: 100%;
+ }
+</style>
+</head>
+<body>
+
+<div id="flipContainer">
+ <div id="flipper">
+ <div id="front">
+ <img src="imglilac/about-1.jpg" alt="Front Image">
+ </div>
+ <div id="back">
+<img src="imglilac/shop-6.webp" alt="Back Image">
+ </div>
+</div>
+</div>
+</body>
+</html>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light and Dark Mode</title>
+<style>
+ body {
+ transition: background-color 0.5s ease;
+ }
+ #myBtn {
+ margin-bottom: 20px;
+ }
+ .dark-mode {
+ background-color: #222;
+ color: #fff;
+}
+</style>
+</head>
+<body id="body">
+ 
+<button id="myBtn">Toggle Mode</button>
+<p id="demo">Demo try</p>
+
+<script>
+ document.getElementById("myBtn").addEventListener("click", function() {
+ var body = document.getElementById("body");
+ var demo = document.getElementById("demo");
+
+ if (body.classList.contains("dark-mode")) {
+ body.classList.remove("dark-mode");
+ demo.textContent = "Light Mode";
+} 
+ else {
+ body.classList.add("dark-mode");
+ demo.textContent = "Dark Mode";
+}
+});
+</script>
+
+</body>
+</html>
+<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light and Dark Mode</title>
+<style>
+body {
+ transition: background-color 0.5s ease;
+ }
+ #myBtn {
+ margin-bottom: 20px;
+}
+.dark-mode {
+ background-color: #222;
+ color: #fff;
+}
+</style>
+</head>
+<body id="body">
+ 
+<div>
+ <input type="range" min="1000" max="10000" value="5000" class="slider" id="myRange">
+ <p>Value: <span id="demo"></span></p>
+ </div>
+ 
+ <script>
+ var slider = document.getElementById("myRange");
+ var output = document.getElementById("demo");
+ output.innerHTML = slider.value;
+ 
+ slider.oninput = function() {
+ output.innerHTML = this.value;
+ }
+ </script>
+ 
+
+</body>
+</html>
+
+<br>
+
+<html><head>
+
+ </head><body>
+
+ <button onclick="openFullscreen();">Open Fullscreen</button>
+ <button onclick="closeFullscreen();">Close Fullscreen</button>
+ 
+<script>
+ var open = document.documentElement;
+ function openFullscreen() {
+ if (open.requestFullscreen) {
+ open.requestFullscreen();
+ }
+ }
+ 
+ function closeFullscreen() {
+ if (document.exitFullscreen) {
+ document.exitFullscreen();
+ }
+ }
+</script> 
+
+</body>
+ </html><br><br><br>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+</head>
+<body>
+
+<p><button onclick="myFunction()">Click Me</button></p>
+
+ <div id="try1">Hello</div>
+
+<script>
+ function myFunction() {
+ var x = document.getElementById("try1");
+ if (x.innerHTML === "Hello") {
+ x.innerHTML = "Swapped text!";
+ } else {
+ x.innerHTML = "Hello";
+ }
+}
+ </script> 
+</body>
+</html><br><br><br>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmouseover Attribute</h2>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;
+width:120px;
+height:20px;
+padding:40px;
+">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+ obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+ obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html> 
+<br><br>
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The onmousedown Attribute</h2>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+ obj.style.backgroundColor = "#1ec5e5";
+ obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+ obj.style.backgroundColor="#D94A38";
+obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
+<br><br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bouncing Circle Animation</title>
+<style>
+#animate {
+width: 100px;
+height: 100px;
+background-color: red;
+border-radius: 50%;
+position: relative;
+}
+</style>
+</head>
+<body>
+
+<div id="animate"></div>
+
+<script>
+// JavaScript to manipulate animation
+const animate = document.getElementById('animate');
+let positionY = 0;
+let velocityY = 1;
+const gravity = 0.1;
+
+function bounce() {
+positionY += velocityY;
+velocityY += gravity;
+if (positionY >= 300) {
+velocityY *= -0.8; // Bounce back with reduced velocity
+}
+animate.style.top = positionY + 'px';
+requestAnimationFrame(bounce);
+}
+
+bounce();
+</script>
+
+</body>
+</html>
+<br><br>
+
+<br>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial,Helvetica,sans-serif}
+#myImg{border-radius:5px;cursor:pointer;transition:.3s}
+#myImg:hover{opacity:.7}
+.modal{display:none;position:fixed;z-index:1;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,.9)}
+.modalcontent{margin:auto;display:block;width:80%;max-width:700px}
+.modalcontent,#caption{animation:zoom .6s}
+#caption{text-align:center;color:#ccc;padding:10px 0;height:150px}
+.close{position:absolute;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:bold;transition:.3s}
+.close:hover,.close:focus{color:#bbb;text-decoration:none;cursor:pointer}
+@media only screen and (max-width:700px){.modal-content{width:100%}}
+</style>
+</head>
+<body>
+
+<!-- <h2>Image Modal</h2> -->
+<!-- <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p> -->
+<!-- <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p> -->
+
+<img id="myImg" src="imglilac/blog-2.webp" alt="" style="width:100%;max-width:300px">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+<span class="close">&times;</span>
+<img class="modalcontent" id="img01" style="border: 1px solid red;">
+</div>
+
+<script>
+var modal=document.getElementById("myModal"),
+img=document.getElementById("myImg"),
+modalImg=document.getElementById("img01");
+img.onclick=function(){modal.style.display="block",
+modalImg.src=this.src,modalcontent.innerHTML=this.alt};
+document.getElementsByClassName("close")[0].onclick=function(){modal.style.display="none"};
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+ font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+ height: 100%;
+ width: 0;
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ background-color: #111;
+ overflow-x: hidden;
+ transition: 0.5s;
+ padding-top: 60px;
+}
+
+.sidenav a {
+ padding: 8px 8px 8px 32px;
+ text-decoration: none;
+ font-size: 25px;
+ color: #818181;
+ display: block;
+ transition: 0.3s;
+}
+
+.sidenav a:hover {
+ color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+ position: absolute;
+ top: 0;
+ right: 25px;
+ font-size: 36px;
+ margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div id="mySidenav" class="sidenav">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ <a href="#">About</a>
+ <a href="#">Services</a>
+<a href="#">Clients</a>
+<a href="#">Contact</a>
+</div>
+
+<h2>Animated Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+<script>
+function openNav() {
+ document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+ document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>
+ #flipContainer {
+ perspective: 500px;
+ width: 200px;
+ height: 200px;
+ }
+
+ #flipper {
+ width: 100%;
+ height: 100%;
+ transform-style: preserve-3d;
+ transition: transform 0.5s;
+ }
+
+ #flipContainer:hover #flipper {
+ transform: rotateY(180deg);
+ }
+
+ #front, #back {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ backface-visibility: hidden;
+ }
+
+ #back {
+ transform: rotateY(-180deg);
+ }
+
+ img {
+ width: 100%;
+ height: 100%;
+ }
+ </style>
+</head>
+<body>
+<div id="flipContainer">
+ <div id="flipper">
+ <div id="front">
+ <img src="src/images/shop-16 (1).webp" alt="Front Image">
+ </div>
+ <div id="back">
+ <img src="src/images/shop-16.1.webp" alt="Back Image">
+ </div>
+ </div>
+</div>
+</body>
+</html>

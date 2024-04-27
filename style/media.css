@@ -1,0 +1,139 @@
+@media only screen and (max-width:767px){
+    .navbar-nav{
+    margin-left: 0px !important;
+    }
+    #container{
+        display: none;
+        /* border: 1px solid red; */
+
+    }
+    .PURE{
+        height: auto !important;
+        /* border: 2px solid red; */
+    }
+    .PURE-1{
+        height: auto !important;
+        /* border: 2px solid red; */
+    }
+    .PURE h2{
+        font-size: 27px !important;
+
+    }
+    /* hr{
+        border: none;
+    } */
+    .Triple button{
+        width: 50% !important;
+    }
+    .Triple p{
+        margin-top: 10px;
+    }
+    .Triple-1 button{
+        width: 50% !important;
+    }
+    /* .Triple h5{
+        padding-top:30px !important;
+        border: 1px solid red;
+    } */
+    .BODYCARE{
+        margin: 10px;
+        /* border: 1px solid red; */
+    }
+    .TOP-PICKS h2{
+        font-size: 28px !important;
+    }
+    .TOP-PICKS{
+        margin: 0;
+    }
+    /* .BODYCARE-1{
+        margin: 0 !important;
+    } */
+    .BODYCARE{
+        margin: 10px;
+    }
+     .SMOOTH{
+        margin: 10px;
+    } 
+    .lNATURAL-L{
+        margin: 10px;
+    }
+    .CHEMICAL-FREE{
+        margin: 10px;
+    }
+    .HOT-SALE h1{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+.TESTIMONIAL h2{
+    font-size: 30px !important;
+}
+.TESTIMONIAL video{
+    height: auto !important;
+    /* margin: 10px !important; */
+}
+.TESTIMONIAL{
+    height: auto !important;
+}
+.Care-Collections{
+    height: auto !important;
+    /* border: 1px solid red; */
+    background-size: 100% 100% !important;
+}
+
+.Care-Collections marquee{
+    /* height: auto; */
+    display: none;
+}
+.Care-Collections h1{
+    font-size: 30px !important;
+    margin-left: 20px;
+    margin-top: -15px;
+}
+.Care-Collections p{
+    margin-left: 20px;
+}
+.Care-Collections img{
+    margin-left: 20px;
+}
+.Care-Collections button{
+    margin-left: 20px;
+}
+.All-Product-2{
+    /* border: 1px solid red ; */
+    margin: 10px;
+    height: auto !important;
+}
+.All-Product-1{
+    /* border: 1px solid rgb(25, 222, 38) ; */
+    margin: 10px;
+}
+.All-Product{
+    margin: 10px;
+}
+.flipper-1 img{
+    /* border: 1px solid rgb(25, 25, 230); */
+    margin: 10px !important;
+}
+}
+    /* marquee slider start */
+    @media screen and (max-width: 767px) {
+        .b-slider__slide {
+          text-align: center;
+          width: 20rem;
+          height: 8rem;
+          display: flex;
+          align-items: center;
+
+        }
+      }
+      @media screen and (max-width: 556px) {
+        .b-slider__slide {
+          text-align: center;
+          width: 15rem;
+          height: 8rem;
+          display: flex;
+          align-items: center;
+        }
+      }
+/* marquee slider end */
