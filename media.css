@@ -24,7 +24,6 @@
     } */
     .Triple button{
         width: 50% !important;
-        /* border: 1px solid red; */
     }
     .Triple p{
         margin-top: 10px;
@@ -138,3 +137,104 @@
         }
       }
 /* marquee slider end */
+ @media only screen and (min-width:768px) and  (max-width:1024px){
+
+    .Triple button{
+        width: 40% !important;
+        /* border: 1px solid red; */
+    } 
+    .Triple-1 button{
+        width: 40% !important;
+
+    }
+    .SHIPPING-11{
+        width: 100%;
+        height: 200px;
+    /* border: 1px solid red !important; */
+    margin: 10px;
+    }
+    
+.SHIPPING svg{
+    width: 100%;
+    height:80px !important;
+    /* border: 1px solid red !important; */
+}
+.underline-btn{
+    font-size: 16px !important;
+}
+.Natural{
+    border: 1px solid rgb(151, 196, 151);
+    margin: 10px;
+    height: auto !important;
+}
+.Natural a{
+    /* border: 1px solid red !important; */
+    margin-top: -10px;
+
+}
+.Natural p{
+    font-size: 15px;
+}
+  .PURE{
+    height: auto !important;
+    /* border: 2px solid red; */
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 10px;
+}
+.NATURAL-L{
+    margin: 10px;
+    /* height: 200px !important; */
+}
+.HOT-SALE img{
+    height: auto !important;
+    border: 1px solid rgb(113, 117, 113);
+
+}
+.HOT-SALE h5{
+/* border: 1px solid red; */
+margin-top: -170px;
+}
+.TESTIMONIAL video{
+    width: 100% !important;
+    /* border: 1px solid red; */
+    margin: 10px;
+}
+.TESTIMONIAL{
+    height: auto !important;
+}
+.Care-Collections{
+    height: auto !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+.All-Product-3{
+    overflow: hidden !important;
+    padding: 0 !important;
+}
+.All-Product-2{
+    /* border: 1px solid red; */
+    height: auto;
+    margin: 10px;
+}
+.All-Product-2 button{
+    margin: 15px;
+}
+.Under-Eye{
+    border: 2px solid orangered;
+    height: auto;
+}
+.Under-Eye-image{
+    border: 1px solid red;
+}
+.Under-Eye-1{
+    border: 1px solid blue;
+    margin: 10px;
+}
+.marquee-11{
+    /* border: 1px solid red; */
+    display:none !important;
+}
+
+ }
+
