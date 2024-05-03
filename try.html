@@ -1,78 +1,70 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>CodePen - slider</title>
-  <link rel="stylesheet" href="try.css">
 
-</head>
-<body>
+
+
+<div id="container">
+    <div id="marquee" onmouseover="stopMarquee()" onmouseout="startMarquee()">
+      <span> Black Friday :10% Off Store wide</span>
+      <span> &nbsp; Free Shipping On Orders Above $300</span>
+      <span> &nbsp; &nbsp; &nbsp; Use Code : Lilac20 On Checkout</span>
+    </div>
+  </div>
   
-<!-- partial:index.partial.html -->
-<html>
-    <head>
-        <link href="Main.css" rel="stylesheet"/>
-        <script src="jquery-1.10.2.min.js"></script>
-        <script src="JQUERY%20Main.js"></script>
-    </head>
-    <body>
-        <div id="layer"></div>
-        <div id="main">
-            <ul id="slider">
-                <li>
-                    <!-- <div class="tooltip t1">
-                        PEPSI
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/Grid-3.webp" height="250px" width="150px"/>
-                </li>
-                <li>
-                    <!-- <div class="tooltip t2">
-                        MTN DEW
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/Grid-4.webp" height="250px" width="150px"/>
-                </li>
-                <li>
-                    <!-- <div class="tooltip t3">
-                        COCACOLA
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/blog-1.webp" height="250px" width="150px"/>
-                </li>
-                <li>
-                    <!-- <div class="tooltip t4">
-                        FIZZ
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/blog-2.webp" height="250px" width="150px"/>
-                </li>
-                <li>
-                    <!-- <div class="tooltip t5">
-                        7UP
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/blog-3.webp" height="250px" width="150px"/>
-                </li>
-                <li>
-                    <!-- <div class="tooltip t6">
-                        DR PEPPER
-                        <hr size="1px" width="60%" color="black"/>
-                        $1
-                    </div> -->
-                    <img src="src/images/Grid-1.webp" height="250px" width="150px"/>
-                </li>
-            </ul>
-        </div>
-    </body>
-</html>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
-<script src="try.js"></script>
-</body>
-</html>
+
+
+
+
+<div class="marquee-11">
+    <div class="marquee__group-1">
+      <span>  FREE SHIPPING ON ORDERS ABOVE $300</span>
+<span>USE CODE : LILAC20 ON CHECKOUT</span>
+<span>BLACK FRIDAY :10% OFF STORE WIDE</span>
+        
+
+      
+    </div>
+
+    <div aria-hidden="true" class="marquee__group-1">
+        <span>  FREE SHIPPING ON ORDERS ABOVE $300</span>
+<span>USE CODE : LILAC20 ON CHECKOUT</span>
+<span>BLACK FRIDAY :10% OFF STORE WIDE</span>
+        
+       
+        
+    </div>
+</div>
+<style> .marquee-11 {
+
+    --gap: 2rem;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    background-color: #ECDEC1;
+height:50px ;
+}
+.marquee__group-1 {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+    border: 1px solid red;
+}
+
+.marquee__group-1 span{
+width:100%;
+/* height:150px; */
+object-fit:cover;
+background-size: 100% 100%;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+</style>

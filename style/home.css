@@ -1,3 +1,38 @@
+.marquee-11 {
+
+  --gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  background-color: #ECDEC1;
+height:40px ;
+}
+.marquee__group-1 {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+  /* border: 1px solid red; */
+}
+
+.marquee__group-1 span{
+width:100%;
+/* height:150px; */
+object-fit:cover;
+background-size: 100% 100%;
+}
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% - var(--gap)));
+  }
+}
 
 
 .home-icons{
@@ -6,13 +41,11 @@
     /* transform: translateX(50%); */
     margin-left: 30%;
     word-spacing: 10px;
-}
-marquee span{
-margin-left: 30%;
-}
+/* marquee tag start */
 
 
 
+/* marquee tag end */
 
 
 .Triple{
@@ -64,27 +97,7 @@ border:1px solid grey;
 }
 
 
-#container {
-  overflow: hidden;
-  width: 100%; /* Apne preference ke hisab se width set karein */
-background-color: #ECDEC1;
-height: 30px;
-cursor: pointer;
-line-height: 30px;
 
-}
-#marquee {
-  white-space: nowrap;
-  animation: marquee 30s linear infinite; /* Default marquee animation */
-}
-#marquee span {
-  margin-right: 150px; /* Add margin-right for spacing between lines */
- 
-}
-@keyframes marquee {
-  0% { transform: translateX(-60%); }
-  100% { transform: translateX(100%); }
-}
 .fa-icons i{
     margin: 10px;
 }
@@ -164,7 +177,8 @@ letter-spacing: 1px;
 /* PURE start */
 
 .PURE{
-  background-image: url(../src/images/mask-patten-style.png);
+  background: linear-gradient(rgba(214, 211, 174, 0.329), rgba(216, 211, 163, 0.329)), url(../src/images/mask-patten-style.png);
+  /* background-image: url(../src/images/mask-patten-style.png); */
   width: 100%;
   height: 700px;
 
@@ -531,13 +545,15 @@ line-height: 95px;
 
 /* TESTIMONIAL video start */
  .TESTIMONIAL{
-  background-image: url(../src/images/mask-patten-style.png);
+  background: linear-gradient(rgba(214, 211, 174, 0.329), rgba(216, 211, 163, 0.329)), url(../src/images/mask-patten-style.png);
+
+  /* background-image: url(../src/images/mask-patten-style.png); */
   width: 100%;
   height: 600px;
 }
 .TESTIMONIAL video {
   width: 100%;
-  height: 300px;
+  /* height: 300px; */
 }
 .TESTIMONIAL h5{
 font-size: larger;
@@ -632,6 +648,114 @@ height: 40px;
 .Detangling samp{
   color: orange;
 } 
+.Under-Eye{
+  /* background-image: url(../src/images/mask-patten-style.png); */
+  width: 100%;
+  background: linear-gradient(rgba(214, 211, 174, 0.329), rgba(216, 211, 163, 0.329)), url(../src/images/mask-patten-style.png);
+  /* opacity: 0.5; */
+  /* z-index: 99 !important; */
+}
+.Under-Eye-image img{
+  /* border: 1px solid orangered; */
+  background-size: 100% 100%;
+}
+  
+.Under-Eye-1 input{
+  width: 100%;
+  height: 40px;
+  text-align: justify;
+  
+}
+.Under-Eye-1 input:focus{
+  outline: none;
+}
+
+/* For WebKit-based browsers like Chrome */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  display: block; /* Arrows ko hamesha dikhane ke liye */
+  opacity: 1; /* Arrows ki visibility ko enable karne ke liye */
+  cursor: pointer;
+}
+
+/* For Mozilla Firefox */
+input[type="number"] {
+  appearance: textfield; /* Spinners ko disable karna */
+}
+
+
+
+.Under-Eye-1 button{
+  width: 100%;
+  height: 35px;
+  border: none;
+  margin-top: 2px;
+  background-color: #d8bdaf;
+}
+.Under-Eye-1 button:focus{
+  outline: none;
+}
+.Under-Eye-1 i{
+  color: orange;
+}
+.Safe-Payment{
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 74px;
+  background-color: #E2DFCC;
+}
+.Safe-Payment img{
+  /* line-height: 100px; */
+  padding: 26px;
+}
+.Under-Eye-1 span h5{
+  width: 40%;
+  height: 30px;
+  /* border: 1px solid red; */
+  font-size: 15px;
+  text-align: center;
+  line-height: 26px;
+  /* margin-top: 10px; */
+margin-left: 10px;
+background-color: white;
+position: absolute;
+margin-top: -20px;
+cursor: default;
+}
+.marquee {
+
+  --gap: 2rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  /* min-width: 10%; */
+  animation: scroll 20s linear infinite;
+  /* border: 2px solid red; */
+}
+
+.marquee__group img{
+width:100% !important;
+object-fit:cover;
+background-size: 100% 100%;
+/* border: 2px solid red; */
+}
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
 
 /* Care-Collections end */
 
