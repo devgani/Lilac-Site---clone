@@ -1,70 +1,404 @@
-
-
-
-<div id="container">
-    <div id="marquee" onmouseover="stopMarquee()" onmouseout="startMarquee()">
-      <span> Black Friday :10% Off Store wide</span>
-      <span> &nbsp; Free Shipping On Orders Above $300</span>
-      <span> &nbsp; &nbsp; &nbsp; Use Code : Lilac20 On Checkout</span>
+<div class="marquee" onmouseover="this.stop();" onmouseout="this.start();">
+    <div class="marquee-content"> 
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=01" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <!-- <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=02" alt=""> -->
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=03" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=04" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=05" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=06" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=07" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=08" alt="">
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=01" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=02" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=03" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=04" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=05" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=06" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=07" alt="">
+      </div>
+      
+      <div class="marquee-item">
+        <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=08" alt="">
+      </div>
     </div>
   </div>
-  
-
-
-
-
-<div class="marquee-11">
-    <div class="marquee__group-1">
-      <span>  FREE SHIPPING ON ORDERS ABOVE $300</span>
-<span>USE CODE : LILAC20 ON CHECKOUT</span>
-<span>BLACK FRIDAY :10% OFF STORE WIDE</span>
-        
-
-      
-    </div>
-
-    <div aria-hidden="true" class="marquee__group-1">
-        <span>  FREE SHIPPING ON ORDERS ABOVE $300</span>
-<span>USE CODE : LILAC20 ON CHECKOUT</span>
-<span>BLACK FRIDAY :10% OFF STORE WIDE</span>
-        
-       
-        
-    </div>
-</div>
-<style> .marquee-11 {
-
-    --gap: 2rem;
-    display: flex;
-    overflow: hidden;
-    user-select: none;
-    gap: var(--gap);
-    background-color: #ECDEC1;
-height:50px ;
-}
-.marquee__group-1 {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: var(--gap);
-    min-width: 100%;
-    animation: scroll 20s linear infinite;
-    border: 1px solid red;
+  <style>* {
+  box-sizing: border-box;
 }
 
-.marquee__group-1 span{
-width:100%;
-/* height:150px; */
-object-fit:cover;
-background-size: 100% 100%;
+body {
+  margin: 0;
 }
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-100% - var(--gap)));
-    }
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scrolling 15s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+  overflow: hidden;
+/*   flex: 0 0 20vw; */
+/*   margin: 0 2vw; */
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+/*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translatex(-144vw); }
+}
+
+.marquee-content:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
 }
 </style>
+<br><br><br><br>
+<div class="review">
+    <div class="review__marquee">
+        <div class="review__marquee__container">
+            <div class="scroll">
+                <div class="itemOdd">
+                  <div class="item__text">
+                    <div class="item__text__top">
+                      <!-- <h6 >Customer Review</h6> -->
+                      <p >Top Notch</p>
+                    </div>
+                    <!-- <h5 >
+                      Lorem ipsum dolor sit amet consectetur. 
+                      Aenean nibh gravida convallis cursus varius a.
+                       Amet sagittis at diam interdum.
+                    </h5> -->
+                  </div>
+                </div>
+  
+                <div class="itemEven">
+                  <div class="item__text">
+                    <div class="item__text__top">
+                      <!-- <h6 >Customer Review</h6> -->
+                      <p >Satisfied</p>
+                    </div>
+                    <!-- <h5 >
+                      Lorem ipsum dolor sit amet consectetur. 
+                      Aenean nibh gravida convallis cursus varius a.
+                       Amet sagittis at diam interdum.
+                    </h5> -->
+                  </div>
+                </div>
+  
+                <div class="itemOdd">
+                  <div class="item__text">
+                    <div class="item__text__top">
+                      <!-- <h6 >Customer Review</h6> -->
+                      <p >Top Notch</p>
+                    </div>
+                    <!-- <h5 >
+                      Lorem ipsum dolor sit amet consectetur. 
+                      Aenean nibh gravida convallis cursus varius a.
+                       Amet sagittis at diam interdum.
+                    </h5> -->
+                  </div>
+                </div>
+  
+                <div class="itemEven">
+                  <div class="item__text">
+                    <div class="item__text__top">
+                      <!-- <h6 >Customer Review</h6> -->
+                      <p >Satisfied</p>
+                    </div>
+                    <!-- <h5 >
+                      Lorem ipsum dolor sit amet consectetur. 
+                      Aenean nibh gravida convallis cursus varius a.
+                       Amet sagittis at diam interdum.
+                    </h5> -->
+                  </div>
+                </div>
+  
+                <div class="itemOdd">
+                  <div class="item__text">
+                    <div class="item__text__top">
+                      <!-- <h6 >Customer Review</h6> -->
+                      <p >Top Notch</p>
+                    </div>
+                    <!-- <h5 >
+                      Lorem ipsum dolor sit amet consectetur. 
+                      Aenean nibh gravida convallis cursus varius a.
+                       Amet sagittis at diam interdum.
+                    </h5> -->
+                  </div>
+                </div>
+  
+                </div>
+
+        </div>
+
+        
+    
+    </div>
+
+    <!-- <div class="review__marquee">
+        <div class="review__marquee__container__two">
+            <div class="scroll">
+              <div class="itemOdd">
+                <div class="item__text">
+                  <div class="item__text__top">
+                    <h6 >Customer Review</h6>
+                    <p >Top Notch</p>
+                  </div>
+                  <h5 >
+                    Lorem ipsum dolor sit amet consectetur. 
+                    Aenean nibh gravida convallis cursus varius a.
+                     Amet sagittis at diam interdum.
+                  </h5>
+                </div>
+              </div>
+
+              <div class="itemEven">
+                <div class="item__text">
+                  <div class="item__text__top">
+                    <h6 >Customer Review</h6>
+                    <p >Satisfied</p>
+                  </div>
+                  <h5 >
+                    Lorem ipsum dolor sit amet consectetur. 
+                    Aenean nibh gravida convallis cursus varius a.
+                     Amet sagittis at diam interdum.
+                  </h5>
+                </div>
+              </div>
+
+              <div class="itemOdd">
+                <div class="item__text">
+                  <div class="item__text__top">
+                    <h6 >Customer Review</h6>
+                    <p >Top Notch</p>
+                  </div>
+                  <h5 >
+                    Lorem ipsum dolor sit amet consectetur. 
+                    Aenean nibh gravida convallis cursus varius a.
+                     Amet sagittis at diam interdum.
+                  </h5>
+                </div>
+              </div>
+
+              <div class="itemEven">
+                <div class="item__text">
+                  <div class="item__text__top">
+                    <h6 >Customer Review</h6>
+                    <p >Satisfied</p>
+                  </div>
+                  <h5 >
+                    Lorem ipsum dolor sit amet consectetur. 
+                    Aenean nibh gravida convallis cursus varius a.
+                     Amet sagittis at diam interdum.
+                  </h5>
+                </div>
+              </div>
+
+              <div class="itemOdd">
+                <div class="item__text">
+                  <div class="item__text__top">
+                    <h6 >Customer Review</h6>
+                    <p >Top Notch</p>
+                  </div>
+                  <h5 >
+                    Lorem ipsum dolor sit amet consectetur. 
+                    Aenean nibh gravida convallis cursus varius a.
+                     Amet sagittis at diam interdum.
+                  </h5>
+                </div>
+              </div>
+
+              </div>
+
+        </div>
+    </div> -->
+
+</div>
+<style>.review {
+    min-height: 100vh;
+    background-color: #f2e2da;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3rem 0;
+    position: relative;
+  }
+  
+  
+  .review__marquee {
+      background-color: transparent;
+      width: 100%;
+      max-width: 100vw;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin: 2rem 0;
+  }
+  
+  .review__marquee__container {
+        flex-shrink: 0;
+        gap: 2rem;
+        padding-right: var(--gap-space);
+        animation: infinityScroll 17s linear 0s infinite forwards;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        max-width: unset;
+        overflow: hidden;
+  }
+  
+  .review__marquee__container:hover {
+      animation-play-state: paused;
+  }
+  
+  /* .review__marquee__container__two {
+      flex-shrink: 0;
+      gap: 2rem;
+      padding-right: var(--gap-space);
+      animation: infinityScroll 22s linear 0s infinite reverse;
+      display: flex;
+      align-items: center;
+      width: max-content;
+      max-width: unset;
+      overflow: hidden;
+  } */
+  
+  /* .review__marquee__container__two:hover {
+      animation-play-state: paused;
+  } */
+  
+  .scroll {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: unset;
+      border: 1px solid red;
+  }
+  
+  .itemOdd {
+      background-color: #ffea04;
+      border-radius: 1.25rem;
+      /* padding: 30px 40px; */
+      width: 100%;
+      /* height: 185px; */
+  }
+  
+  .itemEven {
+      background-color: #72f270;
+      /* background-color: black; */
+      border-radius: 1.25rem;
+      /* padding: 30px 40px; */
+      width: 100%;
+      /* height: 185px; */
+  }
+  
+  .top {
+      margin-bottom: 0.6rem;
+  }
+  
+  /* h6 {
+      font-family: "Neurial Grotesk", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size:  18px;
+      line-height: 125%;
+      color: #d6eee9;
+      margin-bottom: 0.15rem;
+    } */
+  
+    p {
+      font-family: "Neurial Grotesk", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 125%;
+      color: #d6eee9;
+    }
+  
+  
+  /* h5 {
+    font-family: "Neurial Grotesk", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: white;
+  } */
+  
+  
+  @keyframes infinityScroll {
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    @keyframes infinityScroll2 {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>

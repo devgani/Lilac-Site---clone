@@ -1,72 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rating System</title>
 <style>
- .stars {
- font-size: 24px;
- }
-.star {
- color: gray;
- cursor: pointer;
- }
- .filled {
- color: gold;
- }
+.ancestors * { 
+ display: block;
+ border: 2px solid lightgrey;
+ color: lightgrey;
+ padding: 5px;
+ margin: 15px;
+}
 </style>
+<script 000src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
 </head>
 <body>
 
-<div class="stars">
- <span class="star" onclick="fillStar(0)">★</span>
- <span class="star" onclick="fillStar(1)">★</span>
- <span class="star" onclick="fillStar(2)">★</span>
- <span class="star" onclick="fillStar(3)">★</span>
- <span class="star" onclick="fillStar(4)">★</span>
+<div class="ancestors">
+ <div style="width:500px;">div (great-grandparent)
+ <ul>ul (grandparent) 
+ <li>li (direct parent)
+ <span>span</span>
+</li>
+ </ul> 
+ </div>
+
+ <div style="width:500px;">div (grandparent) 
+ <p>p (direct parent)
+ <span>span</span>
+ </p> 
+ </div>
 </div>
 
-<script>
-function fillStar(index) {
- var stars = document.querySelectorAll('.star');
- stars.forEach(function(star, i) {
- if (i <= index) {
- star.classList.add('filled');
- } else {
- star.classList.remove('filled');
- }
- });
-}
-</script>
-
 </body>
 </html>
-<!DOCTYPE html>
-<html>
-<body>
 
-<h2>Number Field</h2>
-
-<p>The <strong>input type="number"</strong> defines a numeric input field.</p>
-
-<p>You can use the min and max attributes to add numeric restrictions in the input field:</p>
-
-<form action="/action_page.php">
-  <label for="quantity">Quantity (between 1 and 5):</label>
-  <input type="number" id="quantity" name="quantity" min="1" max="5">
-  <input type="button" value="+" onclick="increment()">
-</form>
-
-<script>
-function increment() {
-  var inputField = document.getElementById("quantity");
-  var currentValue = parseInt(inputField.value);
-  if (currentValue < parseInt(inputField.getAttribute("max"))) {
-    inputField.value = currentValue + 1;
-  }
-}
-</script>
-
-</body>
-</html>

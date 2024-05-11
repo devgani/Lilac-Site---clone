@@ -1,572 +1,2749 @@
 
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="zxx">
 
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
- #animatedDiv {
- width: 100px;
- height: 100px;
- background-color: #3498db;
- position: relative;
- transition: transform 0.5s ease;
- }
- </style>
+    <title>My School Education Category Bootstrap Responsive website Template | Home :: w3layouts</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="My School Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script>
+        addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+    <!-- //Meta tag Keywords -->
+
+    <!-- Custom-Files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <!-- Bootstrap-CSS -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Style-CSS -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Font-Awesome-Icons-CSS -->
+    <!-- //Custom-Files -->
+
+    <!-- Web-Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+    <!-- //Web-Fonts -->
 </head>
+
 <body>
-
-<button onclick="animateDiv()">Click Me</button>
-<div id="animatedDiv"></div>
-
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <script>
- var currentRotation = 0; // Variable to store the current rotation value
-
- function animateDiv() {
- var div = document.getElementById('animatedDiv');
-
- // Increment the rotation value
- currentRotation += 360;
-
- // Apply the rotation using CSS transform property
- div.style.transform = 'rotate(' + currentRotation + 'deg)';
- }
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+  	}
+})();
 </script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
- .tab {
- display: none;}
-
-.active {
- display: block;
- }
- .tab-button {
- cursor: pointer;
- padding: 10px;
- margin: 5px;
- border: 1px solid #ccc;
- background-color: #f1f1f1;
- }
-</style>
-</head>
-<body>
-
-<div>
- <button class="tab-button" onclick="openTab('tab1')">Tab 1</button>
- <button class="tab-button" onclick="openTab('tab2')">Tab 2</button>
- <button class="tab-button" onclick="openTab('tab3')">Tab 3</button>
-</div>
-
-<div id="tab1" class="tab active">Content for Tab 1</div>
-<div id="tab2" class="tab">Content for Tab 2</div>
-<div id="tab3" class="tab">Content for Tab 3</div>
-
 <script>
- function openTab(tabName) {
- var tabs = document.querySelectorAll('.tab');
- tabs.forEach(function(tab) {
- tab.classList.remove('active');
- });
-
- var activeTab = document.getElementById(tabName);
- activeTab.classList.add('active');
- }
-</script>
-
-</body>
-</html>
-
-
-<br><br>
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
- /* Styles for the overlay background */
- .overlay {
- display: none;
- position: fixed;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background: rgba(0, 0, 0, 0.5);
- justify-content: center;
- align-items: center;
- }
-
- /* Styles for the modal content */
- .modal {
- background: #fff;
- padding: 20px;
- border-radius: 5px;
- box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
- }
- </style>
-</head>
-<body>
-
-<!-- The overlay and modal content -->
-<div class="overlay" id="myOverlay">
- <div class="modal">
- <p>This is your pop-up content.</p>
- <button onclick="closeModal()">Close</button>
- </div>
-</div>
-
-<script>
- // Function to open the modal
- function openModal() {
- document.getElementById('myOverlay').style.display = 'flex';
- }
-
- // Function to close the modal
- function closeModal() {
- document.getElementById('myOverlay').style.display = 'none';
- }
-
- // Open the modal automatically after 3 seconds
-setTimeout(openModal, 3000);
-</script>
-
-</body>
-</html><br><br><br>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
- #flipContainer {
- perspective: 500px;
- width: 200px;
- height: 200px;
- }
-
- #flipper {
- width: 100%;
- height: 100%;
- transform-style: preserve-3d;
- transition: transform 0.5s;
- }
-
- #flipContainer:hover #flipper {
- transform: rotateY(180deg);
- }
-
- #front, #back {
- width: 100%;
- height: 100%;
- position: absolute;
- backface-visibility: hidden;
- }
-
- #back {
- transform: rotateY(180deg);
- }
-
- img {
- width: 100%;
- height: 100%;
- }
-</style>
-</head>
-<body>
-
-<div id="flipContainer">
- <div id="flipper">
- <div id="front">
- <img src="imglilac/about-1.jpg" alt="Front Image">
- </div>
- <div id="back">
-<img src="imglilac/shop-6.webp" alt="Back Image">
- </div>
-</div>
-</div>
-</body>
-</html>
-<br>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Light and Dark Mode</title>
-<style>
- body {
- transition: background-color 0.5s ease;
- }
- #myBtn {
- margin-bottom: 20px;
- }
- .dark-mode {
- background-color: #222;
- color: #fff;
+(function(){
+if(typeof _bsa !== 'undefined' && _bsa) {
+	// format, zoneKey, segment:value, options
+	_bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
 }
-</style>
-</head>
-<body id="body">
- 
-<button id="myBtn">Toggle Mode</button>
-<p id="demo">Demo try</p>
-
+})();
+</script>
 <script>
- document.getElementById("myBtn").addEventListener("click", function() {
- var body = document.getElementById("body");
- var demo = document.getElementById("demo");
+(function(){
+	if(typeof _bsa !== 'undefined' && _bsa) {
+  		// format, zoneKey, segment:value, options
+  		_bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+  	}
+})();
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-98H8KRKT85'></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
- if (body.classList.contains("dark-mode")) {
- body.classList.remove("dark-mode");
- demo.textContent = "Light Mode";
-} 
- else {
- body.classList.add("dark-mode");
- demo.textContent = "Dark Mode";
-}
-});
+  gtag('config', 'G-98H8KRKT85');
 </script>
 
-</body>
-</html>
-<br>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Light and Dark Mode</title>
+<meta name="robots" content="noindex">
+<body><link rel="stylesheet" href="/assests/css/font-awesome.min.css">
+<!-- New toolbar-->
 <style>
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+
+#w3lDemoBar.w3l-demo-bar {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 40px 5px;
+  padding-top:70px;
+  margin-bottom: 70px;
+  background: #0D1326;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+
+#w3lDemoBar.w3l-demo-bar a {
+  display: block;
+  color: #e6ebff;
+  text-decoration: none;
+  line-height: 24px;
+  opacity: .6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#w3lDemoBar.w3l-demo-bar span.w3l-icon {
+  display: block;
+}
+
+#w3lDemoBar.w3l-demo-bar a:hover {
+  opacity: 1;
+}
+
+#w3lDemoBar.w3l-demo-bar .w3l-icon svg {
+  color: #e6ebff;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons {
+  margin-top: 30px;
+  border-top: 1px solid #41414d;
+  padding-top: 40px;
+}
+#w3lDemoBar.w3l-demo-bar .demo-btns {
+  border-top: 1px solid #41414d;
+  padding-top: 30px;
+}
+#w3lDemoBar.w3l-demo-bar .responsive-icons a span.fa {
+  font-size: 26px;
+}
+#w3lDemoBar.w3l-demo-bar .no-margin-bottom{
+  margin-bottom:0;
+}
+.toggle-right-sidebar span {
+  background: #0D1326;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #e6ebff;
+  border-radius: 50px;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: .5;
+}
+.pull-right {
+  float: right;
+  position: fixed;
+  right: 0px;
+  top: 70px;
+  width: 90px;
+  z-index: 99999;
+  text-align: center;
+}
+/* ============================================================
+RIGHT SIDEBAR SECTION
+============================================================ */
+
+#right-sidebar {
+  width: 90px;
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  right: 0px;
+  top: 0;
+  margin-top: 60px;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  overflow-y: auto;
+}
+
+
+/* ============================================================
+RIGHT SIDEBAR TOGGLE SECTION
+============================================================ */
+
+.hide-right-bar-notifications {
+  margin-right: -300px !important;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+
+
+@media (max-width: 992px) {
+  #w3lDemoBar.w3l-demo-bar a.desktop-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 767px) {
+  #w3lDemoBar.w3l-demo-bar a.tablet-mode{
+      display: none;
+
+  }
+}
+@media (max-width: 568px) {
+  #w3lDemoBar.w3l-demo-bar a.mobile-mode{
+      display: none;
+  }
+  #w3lDemoBar.w3l-demo-bar .responsive-icons {
+      margin-top: 0px;
+      border-top: none;
+      padding-top: 0px;
+  }
+  #right-sidebar,.pull-right {
+      width: 90px;
+  }
+  #w3lDemoBar.w3l-demo-bar .no-margin-bottom-mobile{
+      margin-bottom: 0;
+  }
+}
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+/* Reset Code */
 body {
- transition: background-color 0.5s ease;
- }
- #myBtn {
- margin-bottom: 20px;
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+    font-family: 'Dosis', sans-serif;
 }
-.dark-mode {
- background-color: #222;
- color: #fff;
+
+body button,
+.btn,
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
 }
+
+.btn:hover,
+body button:hover {
+    opacity: .8;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+body a:hover {
+    opacity: .8;
+    text-decoration: none;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.9;
+    color: #999;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* //Reset Code */
+
+/* colors code */
+.text-bl {
+    color: #343a40;
+}
+
+.text-wh {
+    color: #fff;
+}
+
+.text-li {
+    color: #f8f9fa;
+}
+
+.bg-li {
+    background: #f8f9fa;
+}
+
+.bg-wh {
+    background: #fff;
+}
+
+.let {
+    letter-spacing: 1px;
+}
+
+/* //colors code */
+
+/* bottom-to-top */
+a.move-top {
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    z-index: 0;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+a.move-top span {
+    color: #000;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+/* //bottom-to-top */
+
+/* header */
+header {
+    background: #fff;
+    border-bottom: 1px solid #e4e4e4;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+/* navigation */
+/* CSS Document */
+.toggle-2,
+.toggle,
+[id^=drop] {
+    display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+#logo a {
+    float: left;
+    display: initial;
+    font-weight: 600;
+    font-size: 35px;
+    color: #719cfe;
+    text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+    /* float: right; */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+    margin: 0px;
+    display: inline-block;
+    float: left;
+}
+
+/* Styling the links */
+nav a {
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 12px;
+    letter-spacing: 2px;
+    display: inline-block;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+    color: #000;
+    opacity: .8;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 26px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    z-index: 9;
+    /* has to be the same number as the "line-height" of "nav a" */
+	-webkit-box-shadow: 0px -1px 5px 0px rgba(143,143,143,0.72);
+-moz-box-shadow: 0px -1px 5px 0px rgba(143,143,143,0.72);
+box-shadow: 0px -1px 5px 0px rgba(143,143,143,0.72);
+}
+
+nav ul ul li a:hover {
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover>ul {
+    display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+nav ul ul li a {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li>a:only-child:after {
+    content: '';
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media(max-width: 1280px) {
+    nav a {
+        font-size: 14px;
+    }
+}
+
+@media all and (max-width : 991px) {
+    #logo {
+        display: block;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    /* Hide the navigation menu by default */
+    /* Also hide the  */
+    .toggle+a,
+    .menu {
+        display: none;
+    }
+
+    /* Stylinf the toggle lable */
+    .toggle {
+        display: block;
+        padding: 7px 12px;
+        font-size: 15px;
+        text-decoration: none;
+        border: none;
+        float: right;
+        background-color: #eee;
+        color: #000;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -o-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -moz-border-radius: 4px;
+        letter-spacing: 1px;
+        margin-bottom: 0;
+        cursor: pointer;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    .menu .toggle {
+        float: none;
+        text-align: center;
+        margin: auto;
+        max-width: 115px;
+        padding: 5px;
+        font-weight: normal;
+        font-size: 14px;
+        letter-spacing: 2px;
+        background: transparent;
+        color: #000;
+    }
+
+    .toggle:hover {
+        opacity: .8;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+    }
+
+    /* Display Dropdown when clicked on Parent Lable */
+    [id^=drop]:checked+ul {
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul {
+        float: right;
+    }
+
+    /* Change menu item's width to 100% */
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav a:hover,
+    nav ul ul ul a {
+        background-color: transparent;
+    }
+
+    /* Hide Dropdowns by Default */
+    nav ul ul {
+        float: none;
+        position: static;
+        color: #ffffff;
+        /* has to be the same number as the "line-height" of "nav a" */
+    }
+
+    /* Hide menus on hover */
+    nav ul ul li:hover>ul,
+    nav ul li:hover>ul {
+        display: none;
+    }
+
+    /* Fisrt Tier Dropdown */
+    nav ul ul li {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul ul li a {
+        letter-spacing: 2px;
+    }
+
+    nav ul ul ul li {
+        position: static;
+        /* has to be the same number as the "width" of "nav ul ul li" */
+    }
+
+    .menu li.active a,
+    .menu li a:hover {
+        opacity: .8;
+    }
+
+    nav a {
+        font-size: 14px;
+        display: block;
+        margin: 8px 0;
+    }
+
+    a.reqe-button {
+        padding: 12px 20px;
+        font-size: 13px;
+        margin: 0 8px;
+    }
+}
+
+@media all and (max-width : 330px) {
+
+    nav ul li {
+        display: block;
+        width: 94%;
+    }
+
+}
+
+/* dropdown */
+#demo {
+    margin: 10px 0 0px 0;
+}
+
+#demo .wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+#demo .parent {
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    line-height: 30px;
+    height: 30px;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    -webkit-transition: border-radius .1s linear, background .1s linear, z-index 0s linear;
+    -webkit-transition-delay: .8s;
+    text-align: center;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#demo .parent:hover,
+#demo .content:hover~.parent {
+    -webkit-transition-delay: 0s, 0s, 0s;
+}
+
+#demo .content:hover~.parent {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 0;
+}
+
+#demo .content {
+    position: absolute;
+    top: 0;
+    display: block;
+    z-index: 1;
+    height: 0;
+    width: 150px;
+    padding-top: 30px;
+    -webkit-transition: height .5s ease;
+    -webkit-transition-delay: .4s;
+}
+
+#demo .wrapper:active .content {
+    height: 150px;
+    z-index: 3;
+    -webkit-transition-delay: 0s;
+}
+
+#demo .content:hover {
+    height: 150px;
+    z-index: 3;
+    -webkit-transition-delay: 0s;
+}
+
+#demo .content ul {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#demo .content ul a {
+    text-decoration: none;
+    padding: 0;
+}
+
+#demo .content li {
+    list-style: none;
+    text-align: left;
+    color: #999;
+    font-size: 16px;
+    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-top: 1px solid #eee;
+}
+
+#demo .content li:last-of-type {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* //dropdown */
+/* //navigation */
+/* //header */
+
+/* banner */
+.mian-content-wthree {
+    background: url(../images/1.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 50vw;
+    position: relative;
+    z-index: 1;
+}
+
+/* banner text */
+.style-banner {
+    padding-top: 18em;
+    max-width: 800px;
+}
+
+.style-banner h3 {
+    font-size: 52px;
+    letter-spacing: 1px;
+}
+
+.style-banner h3 span {
+    color: #ff7f62;
+}
+
+.style-banner p {
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+
+/* //banner text */
+/* form */
+.home-form-w3ls .form-control {
+    font-size: 15px;
+    border: none;
+    -webkit-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.28);
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.28);
+    outline: none;
+    letter-spacing: 1px;
+    color: #000;
+    box-sizing: border-box;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    padding: 12px;
+}
+
+.home-form-w3ls textarea.form-control {
+    height: 46px;
+}
+
+.home-form-w3ls button {
+    background: #ff7f62;
+    color: #fff;
+    padding: 13px 40px;
+    margin-top: 2em;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+/* //form */
+/* //banner */
+
+/* bannner bottom */
+h3.title-w3 {
+    font-size: 42px;
+    color: #719cfe;
+}
+
+.services h3.title-w3,
+.clients h3.title-w3,
+.contact h3.title-w3 {
+    color: #fff;
+}
+
+h3.title-sub {
+    font-size: 27px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+h3.title-sub span {
+    display: block;
+}
+
+/* //bannner bottom */
+
+/* what */
+.services {
+    background: url(../images/bg3.jpg) center no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.services h3.title-w3 span {
+    color: #ff7f62;
+}
+
+.w3pvtits-services-grids h4 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #000 !important;
+    letter-spacing: .5px;
+}
+
+.w3pvtits-services-grids span.ser-icon {
+    font-size: 2em;
+    color: #ff7f62;
+    width: 70px;
+    height: 70px;
+    line-height: 2.2;
+    text-align: center;
+    box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.37);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.w3pvtits-services-grids {
+    background: #fff;
+    padding: 3em;
+}
+
+a.service-btn {
+    color: #fff;
+    font-size: 15px;
+    display: inline-block;
+    letter-spacing: 1px;
+    background: #ff7f62;
+    padding: 10px 16px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+a.service-btn:hover,
+.home-form-w3ls button:hover {
+    letter-spacing: 2px;
+}
+
+/* //what */
+
+/* courses */
+.place-w3 {
+    padding: 0 .5em;
+}
+
+.team-img {
+    min-height: 330px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.team-img-1 {
+    background: url(../images/p1.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.team-img-2 {
+    background: url(../images/p2.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.team-img-3 {
+    background: url(../images/p3.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.team-img-4 {
+    background: url(../images/p4.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.team-content {
+    padding: 3em 2em 0;
+}
+
+.team-meta {
+    color: #eee;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.team-content h4 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* //courses */
+
+/* testimonials */
+.clients {
+    background: url(../images/bg2.jpg) no-repeat center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.feedback-info p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #e4e4e4;
+}
+
+.feedback-info img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+/* //testimonials */
+
+/* events */
+.card {
+    background-color: #eee;
+    border: none;
+    -webkit-box-shadow: 5px 6px 8px 0 rgba(56, 56, 56, 0.21);
+    -moz-box-shadow: 5px 6px 8px 0 rgba(56, 56, 56, 0.21);
+    box-shadow: 5px 6px 8px 0 rgba(56, 56, 56, 0.21);
+}
+
+h5.card-title a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1px;
+    background: #719cfe;
+    padding: 1em;
+    display: block;
+}
+
+.blog_w3icon span {
+    color: #333;
+    font-size: 14px;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.card-body p {
+    color: #333;
+    font-size: 15px;
+}
+
+.card-footer {
+    background-color: #dee2e6;
+}
+
+/* //events */
+
+/* stats */
+.middlesection-w3pvt {
+    position: relative;
+    background: #719cfe;
+    margin-top: 8em !important;
+}
+
+.counter {
+    color: #fff;
+    font-size: 4.5em;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+h3.title-w3-2 {
+    font-size: 34px;
+    letter-spacing: 1px;
+    color: #212020;
+}
+
+.agents-w3 {
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+}
+
+/* //stats */
+
+/* gallery */
+.gal-img img {
+    padding: 10px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+.gal-img:hover.gal-img img {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    -webkit-box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 20px 40px -10px rgba(0, 0, 0, .3);
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+/* popup */
+.pop-overlay {
+    position: fixed;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 999;
+}
+
+.pop-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    background: #719cfe;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -moz-border-radius: 4px;
+    max-width: 520px;
+    position: relative;
+    margin: 8em auto;
+    padding: 3em 2em 2em;
+}
+
+.popup img {
+    box-shadow: 0px 14px 23px 0 rgba(56, 56, 56, 0.23);
+    -webkit-box-shadow: 0px 14px 23px 0 rgba(56, 56, 56, 0.23);
+    -moz-box-shadow: 0px 14px 23px 0 rgba(56, 56, 56, 0.23);
+}
+
+.popup p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 1px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    opacity: 1;
+}
+
+.popup .close:hover {
+    color: #f14f5e;
+}
+
+/* //popup */
+/* //gallery */
+
+/* apps */
+.apps_w3w3pvt {
+    position: relative;
+}
+
+ul.apps-lists li {
+    display: inline-block;
+}
+
+ul.apps-lists li a {
+    background: #fff;
+    color: #000;
+    padding: 12px 25px;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+ul.apps-lists li a span {
+    color: #ff7f62;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+ul.apps-lists li a.active {
+    background: #ff7f62;
+    color: #fff;
+}
+
+ul.apps-lists li a.active span {
+    color: #fff;
+}
+
+.img-podi-w3ls {
+    position: absolute;
+    top: 30%;
+    right: 6%;
+    transform: rotate(40deg);
+}
+
+.img-podi-w3ls span {
+    font-size: 8em;
+    color: #ff7f62;
+}
+
+/* //apps */
+
+/* contact */
+.contact {
+    background: url(../images/bg1.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+
+.contact_grid_right input[type="text"],
+.contact_grid_right input[type="email"],
+.contact_grid_right textarea {
+    outline: none;
+    padding: 15px 15px;
+    font-size: 14px;
+    color: #000;
+    background: #fff;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+}
+
+.contact_grid_right textarea {
+    min-height: 110px;
+    resize: none;
+    width: 100%;
+}
+
+.contact_grid_right button {
+    outline: none;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #fff;
+    background: #719cfe;
+    border: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* //contact */
+
+/* inner banner */
+.inner-banner-w3ls {
+    background: url(../images/banner.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+/* login */
+.modal-body {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label.col-form-label {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.modal-body .form-control {
+    background: #fff;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border: none;
+    padding: 10px 15px;
+}
+
+button.button-style-w3 {
+    outline: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: #ff7f62;
+    border: none;
+    border-radius: 0px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.text-style-w3ls {
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+p.dont-do a:hover,
+.text-style-w3ls:hover {
+    color: #fff;
+}
+
+/* //login */
+
+/* footer */
+footer {
+    background: #ff7f62;
+}
+
+.footer-grid h3 {
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.footer-grid ul li a,
+.footer-grid ul li {
+    color: #eee;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/* logo */
+a.logo.text-wh {
+    font-size: 44px;
+}
+a.logo:hover {
+    color:#fff;
+}
+.copyright-w3ls {
+    background: #191919;
+}
+
+/* //logo */
+
+/* copyright */
+p.copy-right-grids {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+p.copy-right-grids a {
+    color: #ff7f62;
+}
+
+p.copy-right-grids a:hover {
+    color: #fff;
+}
+
+/* //copyright */
+/* social-icons */
+.w3social-icons ul li {
+    display: inline-block;
+}
+
+.w3social-icons ul li a {
+    color: #fff;
+    font-size: 15px;
+    display: block;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 0.59);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 0.59);
+    box-shadow: 0px 0px 1px 0px rgba(255, 255, 255, 0.59);
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 2.6;
+}
+
+.w3social-icons ul li a:hover {
+    -webkit-box-shadow: 0px 0px 13px 2px #ff7f62;
+    -moz-box-shadow: 0px 0px 13px 2px #ff7f62;
+    box-shadow: 0px 0px 13px 2px #ff7f62;
+}
+
+/* //social-icons */
+/* //footer */
+
+/* responsive */
+@media(max-width: 1680px) {
+    .style-banner {
+        padding-top: 16em;
+    }
+}
+
+@media(max-width: 1600px) {
+    .style-banner {
+        padding-top: 14em;
+    }
+}
+
+@media(max-width: 1440px) {
+    .style-banner {
+        padding-top: 12em;
+    }
+
+    .mian-content-wthree {
+        min-height: 52vw;
+    }
+
+    .counter {
+        font-size: 4em;
+    }
+}
+
+@media(max-width: 1366px) {
+    h3.title-w3 {
+        font-size: 40px;
+    }
+
+    .style-banner h3 {
+        font-size: 48px;
+    }
+
+    .style-banner p {
+        font-size: 16px;
+    }
+
+    .mian-content-wthree {
+        min-height: 54vw;
+    }
+
+}
+
+@media(max-width: 1280px) {
+    .w3pvtits-services-grids {
+        padding: 2em;
+    }
+
+    .style-banner {
+        padding-top: 11em;
+    }
+
+    h3.w3pvt-title {
+        font-size: 23px;
+    }
+}
+
+@media(max-width: 1080px) {
+    a.logo.text-wh {
+        font-size: 40px;
+    }
+
+    .demo>li {
+        max-width: 295px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    ul.apps-lists li a {
+        padding: 14px 25px;
+        font-size: 15px;
+    }
+
+    ul.apps-lists li a span {
+        font-size: 22px;
+    }
+
+    .img-podi-w3ls span {
+        font-size: 7em;
+    }
+
+    .serv-w3mk {
+        padding: 0 .5em;
+    }
+
+    .team-img {
+        min-height: 280px;
+    }
+
+    .mian-content-wthree {
+        min-height: 720px;
+    }
+
+    p.counter {
+        font-size: 2.6em;
+    }
+
+    .footer-grid h3 {
+        font-size: 20px;
+    }
+
+    .counter {
+        font-size: 3.5em;
+    }
+
+    h3.title-w3 {
+        font-size: 34px;
+    }
+
+    .agents-w3 {
+        width: 22%;
+    }
+
+    h3.title-sub {
+        font-size: 25px;
+    }
+
+    .style-banner h3 {
+        font-size: 44px;
+    }
+}
+
+@media(max-width: 991px) {
+
+    .contact_grid_right input[type="text"],
+    .contact_grid_right input[type="email"],
+    .contact_grid_right textarea {
+        padding: 14px 15px;
+        font-size: 13px;
+    }
+
+    .contact_grid_right textarea {
+        min-height: 160px;
+    }
+
+    .demo>li {
+        max-width: 215px;
+    }
+
+    .serv-w3mk {
+        padding: 0 1em;
+    }
+
+    .w3pvtits-services-grids {
+        padding: 3em;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .team-img {
+        min-height: 330px;
+    }
+
+    .style-banner p {
+        font-size: 15px;
+    }
+
+    .mian-content-wthree {
+        min-height: 750px;
+    }
+
+    .agents-w3 {
+        width: 17%;
+    }
+
+    .footer-grid h3 {
+        font-size: 22px;
+    }
+
+    h3.w3pvt-title {
+        font-size: 24px;
+    }
+
+    .counter {
+        font-size: 3em;
+    }
+
+    .middlesection-w3pvt {
+        margin-top: 3em !important;
+    }
+
+    #logo a {
+        font-size: 30px;
+    }
+
+    .style-banner {
+        padding-top: 9em;
+    }
+}
+
+@media(max-width: 900px) {
+    .agents-w3 {
+        left: 4%;
+    }
+
+    .img-podi-w3ls span {
+        font-size: 5em;
+    }
+}
+
+@media(max-width: 800px) {
+    .agents-w3 {
+        width: 22%;
+        left: 2%;
+    }
+}
+
+@media(max-width: 736px) {
+    .w3social-icons ul li a {
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .demo>li {
+        max-width: 240px;
+    }
+
+    ul.apps-lists li a {
+        padding: 14px 17px;
+        font-size: 14px;
+    }
+
+    h3.title-w3 {
+        font-size: 32px;
+    }
+
+    .team-img {
+        min-height: 290px;
+    }
+
+    .style-banner h3 {
+        font-size: 42px;
+    }
+
+    .style-banner p {
+        font-size: 14px;
+    }
+
+    .style-banner {
+        padding-top: 8em;
+    }
+
+    .mian-content-wthree {
+        min-height: 700px;
+    }
+
+    p.counter {
+        font-size: 2.2em;
+    }
+
+    .counter {
+        font-size: 2.8em;
+    }
+
+    h3.title-sub {
+        font-size: 23px;
+    }
+
+    .style-banner h3 {
+        font-size: 38px;
+    }
+}
+
+@media(max-width: 667px) {
+    ul.apps-lists li a {
+        padding: 13px 11px;
+    }
+
+    ul.apps-lists li a span {
+        font-size: 20px;
+    }
+
+    a.logo.text-wh {
+        font-size: 36px;
+    }
+
+    .agents-w3 {
+        width: 25%;
+    }
+}
+
+@media(max-width: 640px) {
+    h3.title-w3 {
+        font-size: 32px;
+    }
+
+    .property-paper {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .counter {
+        font-size: 2.5em;
+    }
+}
+
+@media(max-width: 600px) {
+    ul.apps-lists li a {
+        padding: 13px 9px;
+        font-size: 13px;
+    }
+
+    ul.apps-lists li a i {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 568px) {
+
+    ul.apps-lists li {
+        display: block;
+    }
+
+    ul.apps-lists li a {
+        padding: 15px 15px;
+    }
+
+    .place-w3 {
+        padding: 0 1em;
+    }
+
+    .team-img {
+        min-height: 340px;
+    }
+
+    .home-form-w3ls select.form-control {
+        font-size: 14px;
+    }
+
+    .home-form-w3ls button {
+        font-size: 15px;
+    }
+
+    .w3layouts_stats_left {
+        padding: 0 1em;
+    }
+
+    .agents-w3 {
+        width: 30%;
+    }
+
+    .img-podi-w3ls {
+        top: 48%;
+    }
+
+    .popup {
+        margin: 5em 1em;
+    }
+
+    .agents-w3 {
+        width: 30%;
+        position: static;
+    }
+}
+
+@media(max-width: 480px) {
+    .demo>li {
+        max-width: 202px;
+    }
+
+    .style-banner h3 {
+        font-size: 32px;
+    }
+
+    .style-banner p {
+        font-size: 12px;
+    }
+
+    .mian-content-wthree {
+        min-height: 700px;
+    }
+
+    .agents-w3 {
+        width: 50%;
+    }
+
+    .img-podi-w3ls span {
+        font-size: 4em;
+    }
+}
+
+@media(max-width: 440px) {
+    .contact_grid_right textarea {
+        min-height: 140px;
+    }
+
+    .demo>li {
+        max-width: 100%;
+    }
+
+    h3.w3pvt-title {
+        font-size: 23px;
+    }
+
+    h3.title-sub {
+        font-size: 21px;
+    }
+}
+
+@media(max-width: 414px) {
+    .style-banner h3 {
+        font-size: 30px;
+    }
+
+    .style-banner {
+        padding-top: 8em;
+    }
+
+    .mian-content-wthree {
+        min-height: 680px;
+    }
+
+    h5.card-title a {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 384px) {
+    .contact_grid_right button {
+        padding: 14px 0;
+        font-size: 13px;
+    }
+
+    .img-podi-w3ls span {
+        font-size: 3em;
+    }
+
+    .popup p {
+        font-size: 15px;
+    }
+
+    .w3layouts_stats_left {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+
+    h3.title-w3 {
+        font-size: 28px;
+    }
+
+    .style-banner h3 {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 375px) {
+    h3.title-w3 {
+        font-size: 30px;
+    }
+
+    .w3pvtits-services-grids {
+        padding: 2em;
+    }
+
+    .style-banner {
+        padding-top: 7em;
+    }
+
+    .home-form-w3ls select.form-control {
+        font-size: 13px;
+    }
+
+    .home-form-w3ls button {
+        font-size: 14px;
+        padding: 13px 30px;
+    }
+
+    .mian-content-wthree {
+        min-height: 620px;
+    }
+
+    h3.title-w3 {
+        font-size: 26px;
+    }
+
+    .footer-grid {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    a.service-btn {
+        font-size: 14px;
+        padding: 9px 14px;
+    }
+
+    #logo a {
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 320px) {
+    p.copy-right-grids {
+        letter-spacing: 1px;
+    }
+
+    .footer-grid ul li a,
+    .footer-grid ul li {
+        font-size: 15px;
+    }
+
+    .contact_grid_right textarea {
+        min-height: 120px;
+    }
+
+    h3.title-w3 {
+        font-size: 26px;
+    }
+
+    .team-img {
+        min-height: 300px;
+    }
+
+    .style-banner h3 {
+        font-size: 23px;
+    }
+
+    .style-banner p {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .style-banner {
+        padding-top: 6.5em;
+    }
+
+    .mian-content-wthree {
+        min-height: 600px;
+    }
+
+    .agents-w3 {
+        width: 60%;
+    }
+
+    .footer-grid:nth-child(2),
+    .footer-grid:nth-child(4) {
+        margin-top: 1em;
+    }
+
+    .img-podi-w3ls span {
+        font-size: 2.5em;
+    }
+
+    a.logo.text-wh {
+        font-size: 32px;
+    }
+
+    .popup {
+        padding: 2.5em 1em 1em;
+    }
+
+    h5.card-title a {
+        font-size: 13px;
+    }
+
+    .card-body p {
+        font-size: 14px;
+    }
+
+    .w3pvtits-services-grids h4 {
+        font-size: 22px;
+    }
+
+    .home-form-w3ls {
+        margin-top: 2em !important;
+    }
+
+    .modal-body {
+        padding: 0;
+    }
+}
+
+/* //responsive */
 </style>
-</head>
-<body id="body">
- 
-<div>
- <input type="range" min="1000" max="10000" value="5000" class="slider" id="myRange">
- <p>Value: <span id="demo"></span></p>
- </div>
- 
- <script>
- var slider = document.getElementById("myRange");
- var output = document.getElementById("demo");
- output.innerHTML = slider.value;
- 
- slider.oninput = function() {
- output.innerHTML = this.value;
- }
- </script>
- 
-
-</body>
-</html>
-
-<br>
-
-<html><head>
-
- </head><body>
-
- <button onclick="openFullscreen();">Open Fullscreen</button>
- <button onclick="closeFullscreen();">Close Fullscreen</button>
- 
-<script>
- var open = document.documentElement;
- function openFullscreen() {
- if (open.requestFullscreen) {
- open.requestFullscreen();
- }
- }
- 
- function closeFullscreen() {
- if (document.exitFullscreen) {
- document.exitFullscreen();
- }
- }
-</script> 
-
-</body>
- </html><br><br><br>
-
- <!DOCTYPE html>
-<html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
-
-</head>
-<body>
-
-<p><button onclick="myFunction()">Click Me</button></p>
-
- <div id="try1">Hello</div>
-
-<script>
- function myFunction() {
- var x = document.getElementById("try1");
- if (x.innerHTML === "Hello") {
- x.innerHTML = "Swapped text!";
- } else {
- x.innerHTML = "Hello";
- }
-}
- </script> 
-</body>
-</html><br><br><br>
-
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript HTML Events</h1>
-<h2>The onmouseover Attribute</h2>
-
-<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
-style="background-color:#D94A38;
-width:120px;
-height:20px;
-padding:40px;
-">
-Mouse Over Me</div>
-
-<script>
-function mOver(obj) {
- obj.innerHTML = "Thank You"
-}
-
-function mOut(obj) {
- obj.innerHTML = "Mouse Over Me"
-}
-</script>
-
-</body>
-</html> 
-<br><br>
-
-
-
-<!DOCTYPE html>
-<html>
-<body>
-<h1>JavaScript HTML Events</h1>
-<h2>The onmousedown Attribute</h2>
-
-<div onmousedown="mDown(this)" onmouseup="mUp(this)"
-style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
-Click Me</div>
-
-<script>
-function mDown(obj) {
- obj.style.backgroundColor = "#1ec5e5";
- obj.innerHTML = "Release Me";
-}
-
-function mUp(obj) {
- obj.style.backgroundColor="#D94A38";
-obj.innerHTML="Thank You";
-}
-</script>
-
-</body>
-</html> 
-<br><br>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bouncing Circle Animation</title>
-<style>
-#animate {
-width: 100px;
-height: 100px;
-background-color: red;
-border-radius: 50%;
-position: relative;
-}
-</style>
-</head>
-<body>
-
-<div id="animate"></div>
-
-<script>
-// JavaScript to manipulate animation
-const animate = document.getElementById('animate');
-let positionY = 0;
-let velocityY = 1;
-const gravity = 0.1;
-
-function bounce() {
-positionY += velocityY;
-velocityY += gravity;
-if (positionY >= 300) {
-velocityY *= -0.8; // Bounce back with reduced velocity
-}
-animate.style.top = positionY + 'px';
-requestAnimationFrame(bounce);
-}
-
-bounce();
-</script>
-
-</body>
-</html>
-<br><br>
-
-<br>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{font-family:Arial,Helvetica,sans-serif}
-#myImg{border-radius:5px;cursor:pointer;transition:.3s}
-#myImg:hover{opacity:.7}
-.modal{display:none;position:fixed;z-index:1;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,.9)}
-.modalcontent{margin:auto;display:block;width:80%;max-width:700px}
-.modalcontent,#caption{animation:zoom .6s}
-#caption{text-align:center;color:#ccc;padding:10px 0;height:150px}
-.close{position:absolute;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:bold;transition:.3s}
-.close:hover,.close:focus{color:#bbb;text-decoration:none;cursor:pointer}
-@media only screen and (max-width:700px){.modal-content{width:100%}}
-</style>
-</head>
-<body>
-
-<!-- <h2>Image Modal</h2> -->
-<!-- <p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p> -->
-<!-- <p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p> -->
-
-<img id="myImg" src="imglilac/blog-2.webp" alt="" style="width:100%;max-width:300px">
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-<span class="close">&times;</span>
-<img class="modalcontent" id="img01" style="border: 1px solid red;">
+<div class="pull-right toggle-right-sidebar">
+<span class="fa title-open-right-sidebar tooltipstered fa-angle-double-right"></span>
 </div>
 
-<script>
-var modal=document.getElementById("myModal"),
-img=document.getElementById("myImg"),
-modalImg=document.getElementById("img01");
-img.onclick=function(){modal.style.display="block",
-modalImg.src=this.src,modalcontent.innerHTML=this.alt};
-document.getElementsByClassName("close")[0].onclick=function(){modal.style.display="none"};
-</script>
+<div id="right-sidebar" class="right-sidebar-notifcations nav-collapse">
+<div class="bs-example bs-example-tabs right-sidebar-tab-notification" data-example-id="togglable-tabs">
 
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
- font-family: "Lato", sans-serif;
-}
-
-.sidenav {
- height: 100%;
- width: 0;
- position: fixed;
- z-index: 1;
- top: 0;
- left: 0;
- background-color: #111;
- overflow-x: hidden;
- transition: 0.5s;
- padding-top: 60px;
-}
-
-.sidenav a {
- padding: 8px 8px 8px 32px;
- text-decoration: none;
- font-size: 25px;
- color: #818181;
- display: block;
- transition: 0.3s;
-}
-
-.sidenav a:hover {
- color: #f1f1f1;
-}
-
-.sidenav .closebtn {
- position: absolute;
- top: 0;
- right: 25px;
- font-size: 36px;
- margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
- .sidenav {padding-top: 15px;}
- .sidenav a {font-size: 18px;}
-}
-</style>
-</head>
-<body>
-
-<div id="mySidenav" class="sidenav">
- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
- <a href="#">About</a>
- <a href="#">Services</a>
-<a href="#">Clients</a>
-<a href="#">Contact</a>
+    <div id="w3lDemoBar" class="w3l-demo-bar">
+        <div class="demo-btns">
+        <a href="https://w3layouts.com/?p=43036">
+            <span class="w3l-icon -back">
+                <span class="fa fa-arrow-left"></span>
+            </span>
+            <span class="w3l-text">Back</span>
+        </a>
+        <a href="https://w3layouts.com/?p=43036">
+            <span class="w3l-icon -download">
+                <span class="fa fa-download"></span>
+            </span>
+            <span class="w3l-text">Download</span>
+        </a>
+        <a href="https://w3layouts.com/checkout/?add-to-cart=43036" class="no-margin-bottom-mobile">
+            <span class="w3l-icon -buy">
+                <span class="fa fa-shopping-cart"></span>
+            </span>
+            <span class="w3l-text">Buy</span>
+        </a>
+    </div>
+        <!---<div class="responsive-icons">
+            <a href="#url" class="desktop-mode">
+                <span class="w3l-icon -desktop">
+                    <span class="fa fa-desktop"></span>
+                </span>
+            </a>
+            <a href="#url" class="tablet-mode">
+                <span class="w3l-icon -tablet">
+                    <span class="fa fa-tablet"></span>
+                </span>
+            </a>
+            <a href="#url" class="mobile-mode no-margin-bottom">
+                <span class="w3l-icon -mobile">
+                    <span class="fa fa-mobile"></span>
+                </span>
+            </a>
+        </div>-->
+    </div>
+    <div class="right-sidebar-panel-content animated fadeInRight" tabindex="5003"
+        style="overflow: hidden; outline: none;">
+    </div>
+</div>
+</div>
 </div>
 
-<h2>Animated Sidenav Example</h2>
-<p>Click on the element below to open the side navigation menu.</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+    <!-- header -->
+    <header>
+        <div class="container">
+            <div class="header d-lg-flex justify-content-between align-items-center py-2 px-sm-2 px-1">
+                <!-- logo -->
+                <div id="logo">
+                    <h1><a href="index.html">My School</a></h1>
+                </div>
+                <!-- //logo -->
+                <!-- nav -->
+                <div class="nav_w3ls ml-lg-5">
+                    <nav>
+                        <label for="drop" class="toggle">Menu</label>
+                        <input type="checkbox" id="drop" />
+                        <ul class="menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#join">Join Now</a></li>
+                            <li>
+                                <!-- First Tier Drop Down -->
+                                <label for="drop-2" class="toggle toogle-2">Pages <span class="fa fa-angle-down"
+                                        aria-hidden="true"></span>
+                                </label>
+                                <a href="#">Pages <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+                                <input type="checkbox" id="drop-2" />
+                                <ul>
+                                    <li><a href="#events" class="drop-text">Events</a></li>
+                                    <li><a href="#what" class="drop-text">What We Do?</a></li>
+                                    <li><a href="#courses" class="drop-text">Popular Courses</a></li>
+                                    <li><a href="#stats" class="drop-text">Statistics</a></li>
+                                    <li><a href="#gallery" class="drop-text">Gallery</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="register.html">Register</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- //nav -->
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
 
-<script>
-function openNav() {
- document.getElementById("mySidenav").style.width = "250px";
-}
+    <!-- banner -->
+    <div class="main-w3pvt mian-content-wthree text-center" id="home">
+        <div class="container">
+            <div class="style-banner mx-auto">
+                <h3 class="text-wh font-weight-bold">Welcome to <span>My School</span> <br>Best for Education</h3>
+                <p class="mt-3 text-li" id="join">Join the My School now</p>
+                <!-- form -->
+                <div class="home-form-w3ls mt-5">
+                    <form action="#" method="post">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="Name" placeholder="First Name"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="Name" placeholder="Last Name"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" name="Name" placeholder="Mobile Number"
+                                        required="">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="Name" placeholder="Your Message" required=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn_apt btn">Submit</button>
+                    </form>
+                </div>
+                <!-- //form -->
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+<!---728x90--->
 
-function closeNav() {
- document.getElementById("mySidenav").style.width = "0";
-}
-</script>
+    <!-- banner bottom -->
+    <section class="w3ls-bnrbtm py-5" id="about">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-md-5 mb-sm-4 mb-2 text-center font-weight-bold">About Us</h3>
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <img src="images/about.jpg" alt="about" class="img-fluid mt-4" />
+                </div>
+                <div class="col-lg-6 pr-xl-5 mt-4">
+                    <h3 class="title-sub mb-4">A School should be a place of Light, of Liberty and of Learning </h3>
+                    <p class="sub-para">Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus
+                        at, semper
+                        varius orci. Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad litora torquent
+                        per conubia.</p>
+                    <p class="sub-para pt-4 mt-4 border-top">Donec consequat sapien ut leo cursus rhoncus. Nullam dui
+                        mi, vulputate ac metus
+                        at, semper varius orci. Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad
+                        litora torquent per.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner bottom -->
+<!---728x90--->
+    <!-- services -->
+    <div class="services py-5" id="what">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-xl-5 mb-sm-4 mb-2 text-center text-wh font-weight-bold">What We Do?</h3>
+            <div class="row w3pvtits-services-row text-center">
+                <div class="col-lg-4 serv-w3mk mt-5">
+                    <div class="w3pvtits-services-grids">
+                        <span class="fa fa-leanpub ser-icon" aria-hidden="true"></span>
+                        <h4 class="text-bl my-4">Active Learning</h4>
+                        <p class="text-left">Itaque earum rerum hic tenetur asap iente delectus rulla accumsan.</p>
+                        <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 serv-w3mk mt-5">
+                    <div class="w3pvtits-services-grids">
+                        <span class="fa fa-graduation-cap ser-icon" aria-hidden="true"></span>
+                        <h4 class="text-bl my-4">Full Day Programs </h4>
+                        <p class="text-left">Itaque earum rerum hic tenetur asap iente delectus rulla accumsan.</p>
+                        <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 serv-w3mk mt-5">
+                    <div class="w3pvtits-services-grids">
+                        <span class="fa fa-users ser-icon" aria-hidden="true"></span>
+                        <h4 class="text-bl my-4">Expert Teachers</h4>
+                        <p class="text-left">Itaque earum rerum hic tenetur asap iente delectus rulla accumsan.</p>
+                        <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //services -->
+<!---728x90--->
+    <!-- courses -->
+    <section class="branches py-5" id="courses">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-5 text-center font-weight-bold">Popular Courses</h3>
+            <div class="row branches-position pt-lg-4">
+                <div class="col-lg-3 col-sm-6 place-w3">
+                    <!-- branch-img -->
+                    <div class="team-img team-img-1">
+                        <div class="team-content">
+                            <h4 class="text-wh">Course 1</h4>
+                            <p class="team-meta">Smod enim aug</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- / branch-img -->
+                <div class="col-lg-3 col-sm-6 place-w3 mt-sm-0 mt-4">
+                    <!-- team-img -->
+                    <div class="team-img team-img-2">
+                        <div class="team-content">
+                            <h4 class="text-wh">Course 2</h4>
+                            <p class="team-meta">Cura bitur eui</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.branch-img -->
+                <div class="col-lg-3 col-sm-6 place-w3 mt-lg-0 mt-4">
+                    <!-- team-img -->
+                    <div class="team-img team-img-3">
+                        <div class="team-content">
+                            <h4 class="text-wh">Course 3</h4>
+                            <p class="team-meta">In tempus ac</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.branch-img -->
+                <div class="col-lg-3 col-sm-6 place-w3 mt-lg-0 mt-4">
+                    <!-- team-img -->
+                    <div class="team-img team-img-4">
+                        <div class="team-content">
+                            <h4 class="text-wh">Course 4</h4>
+                            <p class="team-meta">Cuan nibh sit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //places -->
 
-</body>
-</html> 
+    <!-- stats section -->
+    <div class="middlesection-w3pvt py-sm-5 pt-sm-0 pt-5 mt-5" id="stats">
+        <div class="container py-xl-5 py-lg-3">
+            <div class="offset-lg-4 offset-sm-3 left-build-wthree aboutright-w3pvtwthree">
+                <h3 class="title-w3-2 title-w3 mb-md-5 mb-4 font-weight-bold">Our Statistics</h3>
+                <div class="row">
+                    <div class="col-4 w3layouts_stats_left w3_counter_grid">
+                        <h4 class="counter">38+</h4>
+                        <p class="para-text-w3ls text-li let">Total Teachers</p>
+                    </div>
+                    <div class="col-4 w3layouts_stats_left w3_counter_grid2">
+                        <h4 class="counter">30</h4>
+                        <p class="para-text-w3ls text-li let">Class Rooms</p>
+                    </div>
+                    <div class="col-4 w3layouts_stats_left w3_counter_grid1">
+                        <h4 class="counter">12</h4>
+                        <p class="para-text-w3ls text-li let">School Buses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="property-paper">
+            <img src="images/img3.png" alt="" class="img-fluid agents-w3" />
+        </div>
+    </div>
+    <!-- //stats section -->
+
+    <!-- events -->
+    <section class="blog_w3ls py-5" id="events">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-5 text-center font-weight-bold">Don't Miss Our Event</h3>
+            <div class="row mt-4">
+                <!-- blog grid -->
+                <div class="col-lg-4">
+                    <div class="wthree-title mt-lg-5 pt-lg-3">
+                        <h3 class="w3pvt-title text-bl">Sint occ aecat cupi</h3>
+                        <p class="border-top pt-4 mt-4">
+                            Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at,
+                            semper varius orci. Nulla accumsan ac
+                            elit in congue.
+                        </p>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header m-0">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">Cras ultricies ligula sed.</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">Proin eget tortor risus. Curabitur aliquet quam id dui posuere
+                                blandit. Vivamus
+                                magna justo,
+                                lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit.</p>
+                            <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <small class="text-bl">
+                                <b>By: Loremipsum</b>
+                            </small>
+                            <span>
+                                March 20,2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">Cras ultricies ligula sed.</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">Proin eget tortor risus. Curabitur aliquet quam id dui posuere
+                                blandit. Vivamus
+                                magna justo,
+                                lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit.</p>
+                            <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <small class="text-bl">
+                                <b>By: Loremipsum</b>
+                            </small>
+                            <span>
+                                March 22,2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+            </div>
+            <div class="row mt-lg-4">
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header m-0">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">Cras ultricies ligula sed.</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">Proin eget tortor risus. Curabitur aliquet quam id dui posuere
+                                blandit. Vivamus
+                                magna justo,
+                                lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit.</p>
+                            <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <small class="text-bl">
+                                <b>By: Loremipsum</b>
+                            </small>
+                            <span>
+                                March 24,2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">Cras ultricies ligula sed.</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">Proin eget tortor risus. Curabitur aliquet quam id dui posuere
+                                blandit. Vivamus
+                                magna justo,
+                                lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit.</p>
+                            <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <small class="text-bl">
+                                <b>By: Loremipsum</b>
+                            </small>
+                            <span>
+                                March 26,2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+                <!-- blog grid -->
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">Cras ultricies ligula sed.</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">Proin eget tortor risus. Curabitur aliquet quam id dui posuere
+                                blandit. Vivamus
+                                magna justo,
+                                lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit.</p>
+                            <a class="service-btn mt-xl-5 mt-4 btn" href="#">Read More<span class="fa fa-long-arrow-right ml-2"></span></a>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <small class="text-bl">
+                                <b>By: Loremipsum</b>
+                            </small>
+                            <span>
+                                March 28,2019
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- //blog grid -->
+            </div>
+        </div>
+    </section>
+    <!-- //events -->
+
+    <!-- gallery -->
+    <div class="gallery-cont text-center pb-5" id="gallery">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-sm-5 mb-4 text-center text-bl font-weight-bold">Our Gallery</h3>
+            <div class="row news-grids text-center no-gutters">
+                <div class="col-md-4 gal-img">
+                    <a href="#gal1"><img src="images/g1.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal2"><img src="images/g2.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal3"><img src="images/g3.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+            </div>
+            <div class="row news-grids text-center no-gutters">
+                <div class="col-md-4 gal-img">
+                    <a href="#gal4"><img src="images/g4.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal5"><img src="images/g5.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal6"><img src="images/g6.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+            </div>
+            <div class="row news-grids text-center no-gutters">
+                <div class="col-md-4 gal-img">
+                    <a href="#gal7"><img src="images/g7.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal8"><img src="images/g8.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+                <div class="col-md-4 gal-img">
+                    <a href="#gal9"><img src="images/g9.jpg" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+            </div>
+            <!-- gallery popups -->
+            <!-- popup-->
+            <div id="gal1" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g1.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal2" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g2.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal3" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g3.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup3 -->
+            <!-- popup-->
+            <div id="gal4" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g4.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal5" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g5.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal6" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g6.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal7" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g7.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal8" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g8.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- popup-->
+            <div id="gal9" class="pop-overlay animate">
+                <div class="popup">
+                    <img src="images/g9.jpg" alt="Popup Image" class="img-fluid" />
+                    <p class="mt-4">Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat placerat
+                        dolor.</p>
+                    <a class="close" href="#gallery">&times;</a>
+                </div>
+            </div>
+            <!-- //popup -->
+            <!-- //gallery popups -->
+        </div>
+    </div>
+    <!-- //gallery -->
+
+    <!-- testimonials -->
+    <section class="clients py-5" id="testi">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-sm-5 mb-4 text-center text-wh font-weight-bold">What Students Say</h3>
+            <div class="feedback-info text-center">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sedc dnmo eiusmod.
+                    sed do eiusmod tempor
+                    incididunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi</p>
+                <img src="images/te1.jpg" alt=" " class="img-fluid mt-5">
+                <h4 class="mt-4 text-wh font-weight-bold mb-4">Mary Jane</h4>
+            </div>
+        </div>
+    </section>
+    <!-- //testimonials -->
+
+    <!-- apps -->
+    <div class="apps_w3w3pvt bg-li py-5" id="apps">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-2 text-center text-bl font-weight-bold">Download The Apps</h3>
+            <p class="text-center title-w3 mb-md-5 mb-4">Excepteur sint occaecat cupidatat</p>
+            <ul class="list-unstyled apps-lists text-center pt-sm-4">
+                <li>
+                    <a href="#"><span class="fa fa-apple mr-3" aria-hidden="true"></span>App Store</a>
+                </li>
+                <li class="mx-sm-3 my-sm-0 my-3">
+                    <a href="#" class="active"><span class="fa fa-windows mr-3" aria-hidden="true"></span>Windows Store</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-android mr-3" aria-hidden="true"></span>Android</a>
+                </li>
+            </ul>
+        </div>
+        <div class="img-podi-w3ls">
+            <span class="fa fa-leanpub"></span>
+        </div>
+    </div>
+    <!-- //apps -->
+
+    <!-- contact-->
+    <section class="contact py-5" id="contact">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-sm-5 mb-4 text-center text-wh font-weight-bold">Contact Us</h3>
+            <div class="contact_grid_right pt-4">
+                <form action="#" method="post">
+                    <div class="row contact_left_grid">
+                        <div class="col-lg-6 con-left" data-aos="fade-up">
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="Name" placeholder="Name" required="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="email" name="Email" placeholder="Email" required="">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" type="text" name="Subject" placeholder="Subject" required="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 con-right" data-aos="fade-up">
+                            <div class="form-group">
+                                <textarea id="textarea" placeholder="Message" required=""></textarea>
+                            </div>
+                            <div class="sub-honey">
+                                <button class="form-control btn" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- //contact -->
+
+    <!-- footer -->
+    <footer class="py-5">
+        <div class="container py-xl-4 py-lg-3">
+            <div class="row footer-grids">
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3">Navigation</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="index.html">Index</a>
+                        </li>
+                        <li>
+                            <a href="#about">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#what">What We Do?</a>
+                        </li>
+                        <li>
+                            <a href="#gallery">Our Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid">
+                    <h3 class="mb-sm-4 mb-3">Some More</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#join">Apply Now</a>
+                        </li>
+                        <li>
+                            <a href="#events">Our Events</a>
+                        </li>
+                        <li>
+                            <a href="#courses">Popular Courses</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid footer-contact mt-lg-0 mt-4">
+                    <h3 class="mb-sm-4 mb-3">Get In Touch</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            +01(24) 8543 8088
+                        </li>
+                        <li>
+                            <a href="/cdn-cgi/l/email-protection#137a7d757c53766b727e637f763d707c7e"><span class="__cf_email__" data-cfemail="a7cec9c1c8e7c2dfc6cad7cbc289c4c8ca">[email&#160;protected]</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6 footer-grid text-lg-right">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#stats">Our Statistics</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                        <li>
+                            <a href="register.html">Register</a>
+                        </li>
+                        <li>
+                            <a href="#contact">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 footer-grid mt-lg-0 mt-4">
+                    <div class="footer-logo">
+                        <h2 class="text-lg-center text-center">
+                            <a class="logo text-wh font-weight-bold" href="index.html">
+                                My School</a>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- copyright -->
+    <div class="copyright-w3ls py-4">
+        <div class="container">
+            <div class="row">
+                <!-- copyright -->
+                <p class="col-lg-8 copy-right-grids text-wh text-lg-left text-center mt-lg-2">© 2019 My School. All
+                    Rights Reserved | Design by
+                    <a href="https://w3layouts.com/" target="_blank">W3layouts</a>
+                </p>
+                <!-- //copyright -->
+                <!-- social icons -->
+                <div class="col-lg-4 w3social-icons text-lg-right text-center mt-lg-0 mt-3">
+                    <ul>
+                        <li>
+                            <a href="#" class="rounded-circle">
+                                <span class="fa fa-facebook-f"></span>
+                            </a>
+                        </li>
+                        <li class="px-2">
+                            <a href="#" class="rounded-circle">
+                                <span class="fa fa-google-plus"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="rounded-circle">
+                                <span class="fa fa-twitter"></span>
+                            </a>
+                        </li>
+                        <li class="pl-2">
+                            <a href="#" class="rounded-circle">
+                                <span class="fa fa-dribbble"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //social icons -->
+            </div>
+        </div>
+    </div>
+    <!-- //copyright -->
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center">
+        <span class="fa fa-angle-double-up" aria-hidden="true"></span>
+    </a>
+    <!-- //move top icon -->
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function(){if (!document.body) return;var js = "window['__CF$cv$params']={r:'8809a4dd5f4d0bd7',t:'MTcxNTE3MzM0NS4zNzQwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script></body>
+
+</html>
